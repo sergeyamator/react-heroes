@@ -33,7 +33,7 @@
     display: inline-block;
   }
 
-  .heroes_hero {
+  .heroes_link {
     overflow: hidden;
     margin-bottom: 20px;
     border-radius: 10px 0 0 10px;
@@ -58,5 +58,13 @@
 }
 
 .heroes_link {
+  text-decoration: none;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px;
+  background: rgba(0, 221, 255, 0.3);
+  color: #5f16c5;
   text-decoration: none;
 }

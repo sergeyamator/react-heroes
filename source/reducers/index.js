@@ -34,7 +34,8 @@ export default function heroes(state = HEROES_DEFAULT, action) {
     }
 
     case 'EDIT_HERO': {
-      const id = aciton.id;
+      console.log('he');
+      const id = action.id;
 
       return [
 
