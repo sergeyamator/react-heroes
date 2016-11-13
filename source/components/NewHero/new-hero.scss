@@ -1,0 +1,21 @@
+.new-hero {
+  margin-top: 50px;
+
+  &_label {
+    display: block;
+    margin-bottom: 10px;
+
+    input {
+      display: inline-block;
+      border: 1px solid #ccc;
+      width: 150px;
+      height: 30px;
+      padding: 5px;
+      font-size: 12px;
+    }
+  }
+
+  .button {
+    margin-top: 25px;
+  }
+}

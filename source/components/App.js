@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import {createStore} from 'redux';
-import {Provider} from 'react-redux';
+import { createStore } from 'redux';
+import { Provider} from 'react-redux';
+
 import '../assets/styles/app.scss';
 
 import Header from './Header/';

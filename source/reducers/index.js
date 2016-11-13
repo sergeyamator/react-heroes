@@ -23,11 +23,14 @@ const HEROES_DEFAULT = [
 
 export default function heroes(state = HEROES_DEFAULT, action) {
   switch (action.type) {
-    case 'ADD_HERO': {
+    case 'NEW_HERO': {
+      const lastHeroId = state[state.length - 1].id;
+      const newHeroId = lastHeroId + 1;
+
       return [
         ...state,
         {
-          id: action.id,
+          id: newHeroId,
           name: action.name
         }
       ]

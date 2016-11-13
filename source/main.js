@@ -5,8 +5,8 @@ import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 import App from './components/App';
 import Dashboard from './components/Dashboard';
 import Heroes from './components/Heroes';
-import HeroCard from './components/HeroCard/HeroCard';
-import NewHero from './components/NewHero';
+import HeroCard from './components/HeroCard/';
+import NewHero from './components/NewHero/';
 
 ReactDOM.render(
   <Router history={hashHistory}>
