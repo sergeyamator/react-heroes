@@ -1,2 +1,62 @@
 @import "../../../node_modules/normalize.scss/normalize";
 @import "base";
+
+.heroes_list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  &.list {
+    flex-direction: column;
+  }
+}
+
+.dashboard {
+  .heroes_hero {
+    margin-bottom: 15px;
+    padding: 25px;
+    background: #9f92d5;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: darken(#9f92d5, 15%);
+    }
+  }
+}
+
+.list {
+  .heroes_hero,
+  .heroes_id,
+  .heroes_name {
+    display: inline-block;
+  }
+
+  .heroes_hero {
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 10px 0 0 10px;
+    background: #ccc;
+    color: #823fb8;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: darken(#ccc, 15%);
+    }
+  }
+
+  .heroes_id {
+    padding: 10px;
+    background: #9f92d5;
+  }
+
+  .heroes_name {
+    margin-left: 15px;
+  }
+}
+
+.heroes_link {
+  text-decoration: none;
+}

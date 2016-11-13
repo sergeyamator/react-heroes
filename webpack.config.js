@@ -22,6 +22,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel',
         query: {
+          plugins: ['transform-decorators-legacy'],
           presets: ['es2015', 'stage-0', 'react']
         }
       },
@@ -32,7 +33,7 @@ module.exports = {
     ]
   },
 
-  plugins: [
+ /* plugins: [
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: false,
       mangle: false,
@@ -40,5 +41,5 @@ module.exports = {
         warnings: true
       }
     })
-  ]
+  ]*/
 };

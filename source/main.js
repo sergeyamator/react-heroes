@@ -1,13 +1,21 @@
-'use strict';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Gallery from './components/gallery/gallery';
-import pictures from './assets/db/data';
+import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 
-require("./assets/styles/app.scss");
+import App from './components/App';
+import Dashboard from './components/Dashboard';
+import Heroes from './components/Heroes';
+import HeroCard from './components/HeroCard';
 
 ReactDOM.render(
-  <Gallery data={pictures} />,
-  document.getElementById('gallery')
+  <Router history={hashHistory}>
+    <Route path="/" component={App}>
+      <IndexRoute component={Dashboard} />
+      <Route path="dashboard" component={Dashboard}>
+        <Route path="user/:id" component={HeroCard} />
+      </Route>
+      <Route path="heroes" component={Heroes} />
+    </Route>
+  </Router>,
+  document.getElementById('app')
 );

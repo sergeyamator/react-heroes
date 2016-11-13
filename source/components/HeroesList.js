@@ -1,19 +1,21 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
 
 import Hero from './Hero';
 
-@connect(mapStateToProps)
 export default class HeroesList extends Component {
   render() {
-    return(
-      <div className="heroes_list">
+    const {heroes, classView} = this.props;
+    const className = classView ? `heroes_list ${classView}` : 'heroes_list';
+
+    return (
+      <div className={className}>
         {
-          this.props.heroes.map(hero =>
+          heroes.map(hero =>
             <Hero
+              isIdShown={classView !== 'dashboard'}
               key={hero.id}
               id={hero.id}
-              name={hero.text}
+              name={hero.name}
             />
           )
         }
@@ -22,8 +24,4 @@ export default class HeroesList extends Component {
   }
 };
 
-function mapStateToProps(state) {
-  return {
-    heroes: state
-  }
-}
+

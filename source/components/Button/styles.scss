@@ -1,0 +1,22 @@
+.heroes_navigation-button {
+  display: inline-block;
+  margin-left: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #ccc;
+  transition: 0.3s;
+  text-decoration: none;
+
+  &:hover {
+    background: darken(#bcd5dc, 10%);
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &.active {
+    background: #bcd5dc;
+    color: #5f16c5;
+  }
+}
