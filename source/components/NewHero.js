@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { addHero } from '../actions';
-
 const ENTER_KEY = 13;
 
-@connect(undefined, { addHero })
-export default class AddTodo extends Component {
+@connect()
+export default class NewHero extends Component {
   constructor() {
     super();
 
@@ -33,14 +31,9 @@ export default class AddTodo extends Component {
 
   render() {
     return (
-      <div className={}>
+      <div>
         <input
-          className={}
           type="text"
-          placeholder="What needs to be done?"
-          value={this.state.text}
-          onChange={this.handleNameChange}
-          onKeyDown={this.handleKeyDown}
         />
       </div>
     );

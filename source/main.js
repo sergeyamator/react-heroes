@@ -6,6 +6,7 @@ import App from './components/App';
 import Dashboard from './components/Dashboard';
 import Heroes from './components/Heroes';
 import HeroCard from './components/HeroCard/HeroCard';
+import NewHero from './components/NewHero';
 
 ReactDOM.render(
   <Router history={hashHistory}>
@@ -14,6 +15,7 @@ ReactDOM.render(
       <Route path="dashboard" component={Dashboard} />
         <Route path="user/:id" component={HeroCard} />
       <Route path="heroes" component={Heroes} />
+      <Route path="new-hero" component={NewHero}/>
     </Route>
   </Router>,
   document.getElementById('app')

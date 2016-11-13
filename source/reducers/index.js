@@ -34,12 +34,17 @@ export default function heroes(state = HEROES_DEFAULT, action) {
     }
 
     case 'EDIT_HERO': {
-      console.log('he');
-      const id = action.id;
+      const {id, target} = action;
+      const newHeroes = [...state];
 
-      return [
+      newHeroes.forEach(item => {
+        if (item.id === id) {
+          item.name = target.target.value;
+        }
+      });
 
-      ]
+
+      return newHeroes;
     }
 
     default: {

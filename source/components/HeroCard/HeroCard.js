@@ -26,7 +26,8 @@ export default class HeroCard extends Component {
               onChange={e =>
                 dispatch({
                   type: 'EDIT_HERO',
-                  target: e
+                  target: e,
+                  id: currentUser[0].id
                 })
               }
             />
