@@ -50,6 +50,12 @@ export default function heroes(state = HEROES_DEFAULT, action) {
       return newHeroes;
     }
 
+    case 'HERO_DELETE': {
+      if (!confirm('Вы действительно хотите удалить юзера?')) return state;
+
+      return state.filter(item => item.id != action.id);
+    }
+
     default: {
       return state;
     }

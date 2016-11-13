@@ -13,3 +13,15 @@
   color: #158e05;
   font-weight: 700;
 }
+
+.button--delete {
+  margin-left: 25px;
+  color: #fff;
+  background: #f7708c;;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background: darken(#f7708c, 10%);
+  }
+}

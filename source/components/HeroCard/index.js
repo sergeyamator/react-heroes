@@ -6,6 +6,17 @@ import './hero-card.scss';
 
 @connect(mapStateToProps)
 export default class HeroCard extends Component {
+  handleDeleteHero = e => {
+    e.preventDefault();
+
+    this.props.dispatch({
+      type: 'HERO_DELETE',
+      id: this.props.params.id
+    });
+    
+    this.props.router.goBack();
+  };
+
   render() {
     const {params, heroes, dispatch} = this.props;
     const currentUser = heroes.filter((hero) => hero.id == params.id);
@@ -34,6 +45,7 @@ export default class HeroCard extends Component {
           </label>
         </div>
         <Link to="/" className="button">Back</Link>
+        <a className="button button--delete" onClick={this.handleDeleteHero}>Delete Hero</a>
       </div>
     );
   }
